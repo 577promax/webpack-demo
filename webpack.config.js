@@ -8,7 +8,15 @@ module.exports = {
     entry:'./src/index.js', //定义入口
     //不设置默认dist目录
     // output:''
-    //plugin是一个数组
+   
+    //loader写在module.rules里
+    module: {
+        rules: [{
+            test: /\.css$/, //匹配下css
+            loader: 'css-loader', //loader不需要明显引用
+        }]
+    },
+     //plugin是一个数组
     plugins:[
         //path.resolve是用来组合路径
         new HtmlWebpackPlugin({
