@@ -15,7 +15,7 @@ module.exports = {
             test: /\.css$/, //匹配下css
             // loader: 'css-loader', //loader不需要明显引用
             //多个loader，改成use
-            use; []
+            use: ['style-loader', 'css-loader'] //先写style，再css不然报错
         }]
     },
      //plugin是一个数组
